@@ -1,0 +1,23 @@
+{
+  "name": "hngi13/ticketflowtwig",
+  "description": "Ticket Management Web App - Twig/PHP Implementation",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "twig/twig": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "TicketFlow\\": "src/"
+    }
+  },
+  "scripts": {
+    "start": "php -S localhost:8000 -t src"
+  },
+  "authors": [
+    {
+      "name": "Lisan al Gaib",
+      "email": "chidiobinna0001@gmail.com"
+    }
+  ]
+}

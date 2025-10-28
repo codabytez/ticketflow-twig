@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Dashboard - TicketFlow Twig{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div class="max-w-[1440px] mx-auto px-6 py-8">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8 flex-wrap gap-4">
+            <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+            <a href="index.php?action=logout" class="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+                Logout
+            </a>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-lg p-6 fade-in">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg mb-4"></div>
+                <p class="text-3xl font-bold text-gray-900">{{ stats.total }}</p>
+                <p class="text-gray-600">Total Tickets</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 fade-in" style="animation-delay: 0.1s;">
+                <div class="w-12 h-12 bg-green-500 rounded-lg mb-4"></div>
+                <p class="text-3xl font-bold text-gray-900">{{ stats.open }}</p>
+                <p class="text-gray-600">Open</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 fade-in" style="animation-delay: 0.2s;">
+                <div class="w-12 h-12 bg-amber-500 rounded-lg mb-4"></div>
+                <p class="text-3xl font-bold text-gray-900">{{ stats.in_progress }}</p>
+                <p class="text-gray-600">In Progress</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 fade-in" style="animation-delay: 0.3s;">
+                <div class="w-12 h-12 bg-gray-500 rounded-lg mb-4"></div>
+                <p class="text-3xl font-bold text-gray-900">{{ stats.closed }}</p>
+                <p class="text-gray-600">Closed</p>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-xl shadow-lg p-6 fade-in">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Quick Actions</h2>
+            <a href="index.php?page=tickets" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition inline-block">
+                Manage Tickets
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
