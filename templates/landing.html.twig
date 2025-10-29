@@ -1,13 +1,13 @@
 {% extends "base.html.twig" %}
 
-{% block title %}TicketFlow Twig - Home{% endblock %}
+{% block title %}TicketFlow - Home{% endblock %}
 
 {% block content %}
 <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
     <div class="max-w-[1440px] mx-auto">
         <!-- Header -->
         <header class="flex justify-between items-center px-6 py-4">
-            <h1 class="text-2xl font-bold text-indigo-600">TicketFlow Twig</h1>
+            <h1 class="text-2xl font-bold text-indigo-600">TicketFlow</h1>
             <a href="index.php?page=login" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
                 Login
             </a>
@@ -66,7 +66,7 @@
 
         <!-- Footer -->
         <footer class="px-6 py-8 border-t border-gray-200 text-center text-gray-600">
-            <p>&copy; 2025 TicketFlow Twig. All rights reserved.</p>
+            <p>&copy; {{ "now"|date("Y") }} TicketFlow. All rights reserved.</p>
         </footer>
     </div>
 </div>
